@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gesture recognition case study by Allison Otero using IMU signals and machine learning.">
+    <title>IMU Gesture Recognition | Allison Otero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="project-page">
+    <header class="case-hero modeling-hero">
+        <nav class="top-nav" aria-label="Project navigation">
+            <a class="nav-back-link" href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            <ul class="nav-links case-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../docs/Allison_Otero_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container case-hero-inner">
+            <p class="hero-kicker">IMU + Machine Learning Case Study</p>
+            <h1>IMU Gesture Recognition</h1>
+            <p>Sensor-based movement classification system using IMU acceleration and gyroscope data to recognize gesture patterns.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-section">
+            <div class="container case-grid">
+                <aside class="case-meta">
+                    <div>
+                        <span>Role</span>
+                        <p>IMU data collection, feature extraction, model development, evaluation</p>
+                    </div>
+                    <div>
+                        <span>Tools</span>
+                        <p>Arduino Nano 33 BLE Sense, Python, Jupyter, NumPy, Pandas</p>
+                    </div>
+                    <div>
+                        <span>Signals</span>
+                        <p>IMU acceleration and gyroscope data</p>
+                    </div>
+                    <div>
+                        <span>Applications</span>
+                        <p>Embedded classification, human movement analysis, wearable sensing, assistive technology</p>
+                    </div>
+                </aside>
+
+                <div class="case-content">
+                    <div class="case-intro-card">
+                        <span>Project Overview</span>
+                        <p>This project focused on classifying simple IMU-based gestures using motion data collected from an Arduino Nano 33 BLE Sense. It demonstrates how wearable sensors and machine learning can interpret movement patterns from real-world time-series data.</p>
+                    </div>
+
+                    <div class="imu-results-grid">
+                        <figure class="project-figure">
+                            <img src="../assets/imu-gesture/accuracy-epochs.png" alt="Training and validation accuracy over epochs for the IMU gesture neural network.">
+                            <figcaption>Training and validation accuracy across 100 epochs.</figcaption>
+                        </figure>
+                        <figure class="project-figure">
+                            <img src="../assets/imu-gesture/loss-epochs.png" alt="Training and validation loss over epochs for the IMU gesture neural network.">
+                            <figcaption>Training and validation loss showing model convergence.</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="project-evidence-grid imu-evaluation-grid">
+                        <figure class="project-figure project-figure-wide">
+                            <img src="../assets/imu-gesture/nn-confusion-matrix.png" alt="Neural network confusion matrix showing 100 percent test accuracy for shake, punch, and rest gesture classes.">
+                            <figcaption>Neural network test performance across shake, punch, and rest classes.</figcaption>
+                        </figure>
+                        <figure class="project-figure">
+                            <img src="../assets/imu-gesture/classification-report.png" alt="Classification report showing precision, recall, and f1-score for shake, punch, and rest classes.">
+                            <figcaption>Precision, recall, and F1-score summary for the neural network classifier.</figcaption>
+                        </figure>
+                    </div>
+
+                    <h2>Objective</h2>
+                    <p>The goal was to build a sensor-based classification system capable of recognizing movement patterns using motion-based data. The project used IMU data to classify basic gestures and introduced a practical workflow for collecting, labeling, processing, and evaluating sensor data.</p>
+
+                    <h2>IMU Gesture Recognition</h2>
+                    <p>The first version used the onboard IMU on an Arduino Nano 33 BLE Sense to collect acceleration and gyroscope data. The system classified three gesture classes: punch, shake, and rest.</p>
+                    <figure class="project-figure project-figure-wide">
+                        <img src="../assets/imu-gesture/dataset-split-scaling.png" alt="Dataset split and feature scaling summary for the IMU gesture recognition project.">
+                        <figcaption>Dataset organization and feature scaling summary before training and evaluation.</figcaption>
+                    </figure>
+                    <figure class="project-figure project-figure-wide">
+                        <img src="../assets/gesture-recognition/imu-accelerometer-windows.png" alt="Accelerometer signal windows for shake, punch, and rest gesture classes.">
+                        <figcaption>Captured accelerometer windows showing how each gesture produced a different motion signature.</figcaption>
+                    </figure>
+                    <ul>
+                        <li>Collected acceleration in the X, Y, and Z directions.</li>
+                        <li>Collected gyroscope rotation in the X, Y, and Z directions.</li>
+                        <li>Built foundational experience with sensor data collection, time-series windows, gesture labels, and embedded classification logic.</li>
+                    </ul>
+
+                    <h2>Signal Processing & Feature Extraction</h2>
+                    <p>Raw IMU signals were converted into more useful features so the model could distinguish between gesture classes more reliably.</p>
+                    <figure class="project-figure project-figure-wide">
+                        <img src="../assets/gesture-recognition/imu-feature-distributions.png" alt="IMU feature distributions for shake, punch, and rest classes.">
+                        <figcaption>Feature distributions helped evaluate which measurements separated each movement class most clearly.</figcaption>
+                    </figure>
+                    <div class="feature-grid">
+                        <div><strong>Mean</strong><span>Average motion level per window</span></div>
+                        <div><strong>Standard Deviation</strong><span>Signal variation during each gesture</span></div>
+                        <div><strong>Peak-to-Peak</strong><span>Range of acceleration or rotation change</span></div>
+                        <div><strong>Windowing</strong><span>Short time-series segments for model input</span></div>
+                        <div><strong>Class Labels</strong><span>Shake, punch, and rest examples</span></div>
+                        <div><strong>Model Evaluation</strong><span>Accuracy, loss, and confusion matrix review</span></div>
+                    </div>
+
+                    <h2>Machine Learning Workflow</h2>
+                    <figure class="project-figure project-figure-wide">
+                        <img src="../assets/imu-gesture/model-summary.png" alt="Neural network model summary for the gesture classifier showing dense layers and trainable parameters.">
+                        <figcaption>Compact neural network architecture used for gesture classification.</figcaption>
+                    </figure>
+                    <ol class="workflow-list">
+                        <li>Collect labeled sensor data.</li>
+                        <li>Store data in CSV files.</li>
+                        <li>Load data into Python.</li>
+                        <li>Preprocess and organize the IMU signals.</li>
+                        <li>Extract meaningful motion features.</li>
+                        <li>Train a machine learning classification model.</li>
+                        <li>Evaluate model performance.</li>
+                        <li>Prepare for possible embedded deployment.</li>
+                    </ol>
+
+                    <h2>Baseline Comparison</h2>
+                    <div class="project-evidence-grid">
+                        <figure class="project-figure project-figure-wide">
+                            <img src="../assets/imu-gesture/knn-confusion-matrix.png" alt="KNN baseline confusion matrix for shake, punch, and rest classes.">
+                            <figcaption>KNN baseline confusion matrix used as a comparison point against the neural network classifier.</figcaption>
+                        </figure>
+                        <figure class="project-figure">
+                            <img src="../assets/imu-gesture/knn-classification-report.png" alt="KNN baseline classification report for shake, punch, and rest classes.">
+                            <figcaption>KNN precision, recall, and F1-score report.</figcaption>
+                        </figure>
+                    </div>
+
+                    <h2>Skills Demonstrated</h2>
+                    <ul>
+                        <li>Embedded sensor programming and Arduino-to-Python data workflow.</li>
+                        <li>IMU data collection and embedded sensor workflow.</li>
+                        <li>Motion-signal processing and time-series analysis.</li>
+                        <li>Dataset organization, feature extraction, and machine learning model development.</li>
+                        <li>Hardware-software integration and troubleshooting sensor readings.</li>
+                    </ul>
+
+                    <h2>Challenges</h2>
+                    <p>The project required learning how to collect meaningful physical sensor data and organize it for machine learning. Important challenges included defining consistent gesture windows, labeling trials carefully, selecting useful IMU features, and evaluating whether the model generalized across the collected examples.</p>
+
+                    <h2>Future Improvements</h2>
+                    <ul>
+                        <li>Collect a larger dataset with more repetitions per gesture.</li>
+                        <li>Compare multiple machine learning models.</li>
+                        <li>Add real-time classification on an embedded device.</li>
+                        <li>Expand the gesture set beyond shake, punch, and rest.</li>
+                        <li>Add a small dashboard or serial visualizer for live predictions.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

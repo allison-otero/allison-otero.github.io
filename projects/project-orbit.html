@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project ORBIT by Allison Otero: in-progress wearable biomedical monitoring system for astronaut readiness, fatigue, posture, and bio-intelligence telemetry.">
+    <title>Project ORBIT | Allison Otero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="project-page">
+    <header class="case-hero project-orbit-hero">
+        <nav class="top-nav" aria-label="Project navigation">
+            <a class="nav-back-link" href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            <ul class="nav-links case-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../docs/Allison_Otero_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container case-hero-inner">
+            <p class="hero-kicker">Senior Design In Progress</p>
+            <h1>Project ORBIT</h1>
+            <p>Onboard Readiness & Bio-Intelligence Telemetry for astronaut muscle activity, fatigue, posture, and physical readiness monitoring.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-section">
+            <div class="container case-grid">
+                <aside class="case-meta">
+                    <div>
+                        <span>Role</span>
+                        <p>Senior design contributor, biomedical sensing, signal processing, system planning</p>
+                    </div>
+                    <div>
+                        <span>Tools</span>
+                        <p>MyoWare 2.0, sEMG electrodes, Arduino, Python, Raspberry Pi concepts, strain/stretch sensing, dashboard planning</p>
+                    </div>
+                    <div>
+                        <span>Status</span>
+                        <p>In progress. sEMG signal collection and feature exploration have been completed as foundational work.</p>
+                    </div>
+                    <div>
+                        <span>Domain</span>
+                        <p>Space health, wearable biomedical systems, human performance monitoring</p>
+                    </div>
+                </aside>
+
+                <div class="case-content">
+                    <div class="case-intro-card">
+                        <span>Project Overview</span>
+                        <p>ORBIT stands for Onboard Readiness & Bio-Intelligence Telemetry. It is a biomedical engineering senior design project focused on developing a wearable monitoring system for long-duration spaceflight. The project is being designed to track muscle activation, fatigue trends, posture drift, movement-related strain, and physical readiness through sensor-based data and intelligent feedback.</p>
+                    </div>
+
+                    <div class="orbit-concept-panel">
+                        <figure class="orbit-concept-image">
+                            <img src="../assets/orbit/system-model.png" alt="Concept rendering of the ORBIT wearable biomedical monitoring suit.">
+                        </figure>
+                        <div class="orbit-concept-copy">
+                            <span>Concept System Model</span>
+                            <h2>Envisioned Wearable Platform</h2>
+                            <p>This rendering shows the intended direction for ORBIT: a compression-shirt-style wearable with integrated sensing pathways for muscle monitoring, posture awareness, and readiness feedback.</p>
+                            <p>The visual is a concept model, not a completed prototype. It helps communicate how the final system may bring together sEMG sensors, strain or stretch sensing, embedded electronics, and visual feedback into one wearable astronaut-health platform.</p>
+                        </div>
+                    </div>
+
+                    <div class="orbit-signal-gallery">
+                        <figure class="project-figure project-figure-wide">
+                            <img src="../assets/orbit/semg-feature-distributions-updated.png" alt="Updated MyoWare sEMG feature distributions for squat, lunge, and jump classes.">
+                            <figcaption>Updated feature distributions from completed MyoWare sEMG testing, comparing voltage mean, standard deviation, RMS, and peak-to-peak values across squat, lunge, and jump classes.</figcaption>
+                        </figure>
+                        <figure class="project-figure project-figure-wide">
+                            <img src="../assets/orbit/semg-voltage-windows.png" alt="Captured MyoWare EMG voltage windows for squat, lunge, and jump exercise classes.">
+                            <figcaption>Representative captured sEMG voltage windows showing how muscle activation patterns varied across squat, lunge, and jump trials.</figcaption>
+                        </figure>
+                    </div>
+
+                    <h2>Project Purpose</h2>
+                    <p>Long-duration spaceflight can contribute to muscle loss, fatigue, reduced physical performance, and neuromuscular deconditioning. ORBIT is being designed to explore how wearable sensors and intelligent data processing could help monitor these changes by providing feedback on muscle activity, fatigue trends, posture changes, and overall readiness.</p>
+                    <p>The project is focused on research, monitoring, and decision-support concepts rather than medical diagnosis.</p>
+
+                    <h2>Main Objectives</h2>
+                    <ul>
+                        <li>Collect muscle activity data using sEMG sensors.</li>
+                        <li>Detect muscle activation and fatigue trends through signal processing.</li>
+                        <li>Explore strain or stretch sensors for body loading and movement-related strain.</li>
+                        <li>Provide visual feedback through an LED muscle activity display.</li>
+                        <li>Create a user interface for fatigue, readiness, posture, and sensor data.</li>
+                        <li>Explore computer vision for posture tracking and drift detection.</li>
+                    </ul>
+
+                    <h2>System Architecture</h2>
+                    <p>ORBIT is planned as a multi-component wearable monitoring system built around the flow: wearable sensors to microcontroller, microcontroller to processing system, processing system to dashboard, and dashboard to feedback or visualization. A wearable compression-shirt-style platform is being considered for integrating physiological and movement-related sensing into one coordinated prototype.</p>
+                    <ol class="workflow-list">
+                        <li>Wearable sensors collect physiological and movement-related data.</li>
+                        <li>A microcontroller reads and organizes sensor signals.</li>
+                        <li>A Raspberry Pi, laptop, or computer supports signal analysis and visualization.</li>
+                        <li>A dashboard displays readiness, fatigue, posture, and sensor trends.</li>
+                        <li>LED feedback or heat-map concepts provide intuitive visual status cues.</li>
+                    </ol>
+
+                    <h2>Completed sEMG Foundation Work</h2>
+                    <p>The sEMG portion of the project has already been explored through MyoWare-based data collection and feature analysis. This completed work supports ORBIT's planned muscle-monitoring subsystem by demonstrating how muscle activation data can be collected, organized, and transformed into useful features.</p>
+                    <ul>
+                        <li>Used MyoWare 2.0 or equivalent sEMG sensing concepts for muscle signal acquisition.</li>
+                        <li>Collected and organized raw and processed muscle signal data.</li>
+                        <li>Explored baseline comparison, muscle activation detection, and feature extraction.</li>
+                        <li>Evaluated features such as RMS, MAV, variance, peak count, activation duration, and voltage-based distributions.</li>
+                    </ul>
+
+                    <h2>Signal Processing & Fatigue Detection</h2>
+                    <p>ORBIT will use biomedical signal processing concepts to convert raw sEMG data into meaningful readiness information. Because muscle signals can be noisy, the system will require preprocessing and feature extraction before the data can support fatigue-related interpretation.</p>
+                    <div class="feature-grid">
+                        <div><strong>RMS</strong><span>Muscle activation intensity</span></div>
+                        <div><strong>MAV</strong><span>Average signal amplitude</span></div>
+                        <div><strong>Variance</strong><span>Signal intensity changes</span></div>
+                        <div><strong>Peak Count</strong><span>Activation bursts</span></div>
+                        <div><strong>Activation Duration</strong><span>How long a muscle remains active</span></div>
+                        <div><strong>Frequency Features</strong><span>Mean and median frequency for fatigue analysis</span></div>
+                    </div>
+
+                    <h2>Planned Subsystems</h2>
+                    <p>Several ORBIT subsystems are planned or under design. These are included as project goals and should be read as intended development work, not completed results.</p>
+                    <ul>
+                        <li><strong>Strain and loading:</strong> strain gauges or stretch sensors may be used to estimate mechanical loading, movement-related strain, or possible bone-load indicators.</li>
+                        <li><strong>LED visualization:</strong> an LED matrix or display may show muscle activation, fatigue status, left/right comparison, or color-coded readiness indicators.</li>
+                        <li><strong>Dashboard:</strong> the user interface is planned to show sEMG signals, fatigue indicators, readiness status, strain data, posture warnings, session logs, and trend graphs.</li>
+                        <li><strong>Computer vision:</strong> a camera-based subsystem may support posture drift detection, body position tracking, and possible 2-axis camera gimbal control.</li>
+                    </ul>
+
+                    <h2>Tools & Technologies</h2>
+                    <ul>
+                        <li>Surface EMG sensors, MyoWare 2.0 Muscle Sensor, and EMG electrodes.</li>
+                        <li>Arduino Nano 33 BLE Sense or similar microcontroller.</li>
+                        <li>Raspberry Pi 5, laptop, or computer for higher-level processing.</li>
+                        <li>Strain gauges or stretch sensors, LED matrix or LED display system.</li>
+                        <li>Python, Arduino IDE, CSV data logging, signal processing, dashboard and computer vision concepts.</li>
+                    </ul>
+
+                    <h2>Engineering Challenges</h2>
+                    <p>ORBIT involves several important engineering challenges. Reliable sEMG data collection is sensitive to electrode placement, motion artifacts, skin contact, wire movement, and baseline noise. Another challenge is integrating multiple subsystems into one coordinated wearable platform while keeping the system understandable, testable, and practical for demonstration.</p>
+                    <ul>
+                        <li>Choosing reliable electrode placement and reducing signal noise.</li>
+                        <li>Designing wearable wiring and sensor placement.</li>
+                        <li>Creating useful fatigue metrics and readiness indicators.</li>
+                        <li>Calibrating strain or load sensors.</li>
+                        <li>Building a readable dashboard and coordinating hardware/software components.</li>
+                    </ul>
+
+                    <h2>Project Significance</h2>
+                    <p>ORBIT is significant because it combines biomedical engineering, space health, wearable technology, and artificial intelligence concepts into one integrated system. The project explores how physiological data and intelligent feedback could help monitor astronaut readiness during long-duration missions. The same ideas could also apply to rehabilitation, physical therapy, athletic performance, occupational health, military readiness, and remote patient monitoring.</p>
+
+                    <h2>Future Improvements</h2>
+                    <ul>
+                        <li>Test the wearable system with more participants and collect larger sEMG datasets.</li>
+                        <li>Improve dry electrode or conductive fabric integration.</li>
+                        <li>Add machine learning classification for fatigue or movement state.</li>
+                        <li>Improve real-time dashboard responsiveness and muscle activity heat maps.</li>
+                        <li>Combine sEMG, strain, IMU, and computer vision data.</li>
+                        <li>Make the wearable system more compact, comfortable, and demonstration-ready.</li>
+                    </ul>
+
+                    <h2>Summary</h2>
+                    <p>ORBIT is an in-progress wearable biomedical monitoring system designed to track muscle activity, fatigue, posture, and readiness using sEMG sensors, strain or stretch sensors, embedded systems, data visualization, and computer vision concepts. Through this project, I am developing skills in biomedical instrumentation, signal processing, embedded programming, wearable sensor design, systems engineering, and human-centered health technology.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Allison Otero is a biomedical engineering student focused on AI/ML research, embedded sensing, robotics, and physiological signal analysis.">
+    <title>Allison Otero | Biomedical Engineering Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="hero" id="home">
+        <nav class="top-nav" aria-label="Primary navigation">
+            <span class="logo-spacer" aria-hidden="true"></span>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="primary-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#stack">Skills</a></li>
+                <li><a href="#experience">Work</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-inner hero-proof reveal">
+            <div class="avatar">
+                <img src="assets/professional-headshot.png" alt="Professional headshot of Allison Otero">
+            </div>
+            <div>
+                <p class="hero-kicker">Biomedical Engineering + Systems Engineering + Embedded AI</p>
+                <h1>Allison Otero</h1>
+                <p class="hero-description">Biomedical Engineering student at Florida Tech focused on systems engineering, AI/ML research, embedded sensing, robotics, biomedical instrumentation, and physiological signal analysis.</p>
+                <div class="hero-actions">
+                    <a class="button primary resume-button" href="docs/Allison_Otero_Resume.pdf" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> Download Resume</a>
+                    <div class="social-row">
+                        <span>Let's connect</span>
+                        <button class="contact-popup-trigger" type="button" data-popup-title="Email" data-popup-value="allison.m.otero@gmail.com" aria-label="Show Allison's email"><i class="fas fa-envelope"></i></button>
+                        <a href="https://www.linkedin.com/in/allisonotero/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/allison-otero" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-band" id="about">
+            <div class="container about-grid">
+                <div class="about-copy reveal">
+                    <span class="about-kicker">Profile</span>
+                    <h2>About Me</h2>
+                    <p>I am a Biomedical Engineering student at Florida Tech focused on systems engineering, embedded sensing, biomedical instrumentation, and AI-enabled health technologies. My work sits at the intersection of hardware, data, and human performance, with projects spanning wearable monitoring, robotics, signal processing, and intelligent sensing systems.</p>
+                    <p>I am especially interested in engineering roles where I can contribute to research, prototyping, requirements development, technical testing, and practical system integration for aerospace, healthcare, and human-centered technology.</p>
+                </div>
+
+                <div class="focus-list reveal" aria-label="Focus areas">
+                    <span>Focus Areas</span>
+                    <ul>
+                        <li>Systems engineering</li>
+                        <li>AI/ML and signal processing</li>
+                        <li>Biomedical instrumentation</li>
+                        <li>Embedded sensing</li>
+                        <li>Wearable health technology</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section portfolio-section" id="projects">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <h2>Projects</h2>
+                    <p>Click a project to open a detailed page with the problem, role, tools, approach, and planned visuals.</p>
+                </div>
+
+                <div class="portfolio-grid project-showcase reveal">
+                    <a class="project-card" href="projects/project-orbit.html">
+                        <div class="project-cover orbit-cover">
+                            <i class="fas fa-user-astronaut project-cover-icon" aria-hidden="true"></i>
+                            <span class="project-cover-label">Project ORBIT</span>
+                            <div class="cover-badges" aria-label="Project ORBIT focus areas">
+                                <span>sEMG</span>
+                                <span>Wearables</span>
+                                <span>Space Health</span>
+                            </div>
+                        </div>
+                        <div class="project-card-copy">
+                            <p>In-progress astronaut readiness system for muscle activity, fatigue, posture, strain sensing, and bio-intelligence telemetry.</p>
+                        </div>
+                    </a>
+                    <a class="project-card" href="projects/nasa-regolith-robot.html">
+                        <div class="project-cover robotics-cover">
+                            <i class="fas fa-robot project-cover-icon" aria-hidden="true"></i>
+                            <span class="project-cover-label">NASA Regolith Robot</span>
+                            <div class="cover-badges" aria-label="NASA Regolith Robot focus areas">
+                                <span>Robotics</span>
+                                <span>NASA</span>
+                                <span>Terrain</span>
+                            </div>
+                        </div>
+                        <div class="project-card-copy">
+                            <p>NASA competition robot for simulated lunar regolith operations, controls support, manufacturing, and systems engineering documentation.</p>
+                        </div>
+                    </a>
+                    <a class="project-card" href="projects/predictive-modeling.html">
+                        <div class="project-cover gesture-cover">
+                            <i class="fas fa-person-running project-cover-icon" aria-hidden="true"></i>
+                            <span class="project-cover-label">IMU Gesture Recognition</span>
+                            <div class="cover-badges" aria-label="Gesture recognition focus areas">
+                                <span>IMU</span>
+                                <span>Arduino</span>
+                                <span>ML</span>
+                            </div>
+                        </div>
+                        <div class="project-card-copy">
+                            <p>IMU-based movement recognition system using accelerometer and gyroscope data for gesture classification.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section capabilities" id="stack">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <h2>Skills</h2>
+                    <p>A technical foundation spanning data analysis, intelligent systems, biomedical sensing, embedded hardware, prototyping, and team-based engineering execution.</p>
+                </div>
+
+                <div class="service-grid reveal">
+                    <article>
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Programming & Data Analysis</h3>
+                        <p>Python, MATLAB, Microsoft Office (Excel, Word, PowerPoint), statistical analysis, predictive modeling, data visualization.</p>
+                    </article>
+                    <article>
+                        <i class="fas fa-brain"></i>
+                        <h3>AI/ML</h3>
+                        <p>Supervised machine learning, neural network development, feature extraction, model testing, TinyML/embedded AI.</p>
+                    </article>
+                    <article>
+                        <i class="fas fa-wave-square"></i>
+                        <h3>Biomedical & Signal Processing</h3>
+                        <p>sEMG, MyoWare sensors, physiological signals, biomedical instrumentation, signal processing, sensor-based data collection.</p>
+                    </article>
+                    <article>
+                        <i class="fas fa-microchip"></i>
+                        <h3>Embedded Systems & Hardware</h3>
+                        <p>Arduino Uno, Arduino Nano 33 BLE Sense, Raspberry Pi, sensor interfacing, hardware-software integration, real-time systems.</p>
+                    </article>
+                    <article>
+                        <i class="fas fa-screwdriver-wrench"></i>
+                        <h3>Engineering & Prototyping</h3>
+                        <p>CAD, manufacturing, machine shop, waterjet, CO2 and fiber laser cutter.</p>
+                    </article>
+                    <article>
+                        <i class="fas fa-users-gear"></i>
+                        <h3>Professional Skills</h3>
+                        <p>Technical communication, teamwork, organization, public speaking, leadership, project coordination.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section work-section" id="experience">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <h2>Work Experience</h2>
+                    <p>Research, robotics, data, healthcare, and campus leadership experience.</p>
+                </div>
+
+                <div class="experience-timeline reveal">
+                    <article class="experience-item">
+                        <div class="experience-org">Florida Institute of<br>Technology</div>
+                        <div class="experience-marker" aria-hidden="true"></div>
+                        <div class="experience-details">
+                            <span>May 2026 - Present</span>
+                            <h3>AI/ML Research Assistant</h3>
+                            <p class="org">Florida Institute of Technology - Melbourne, FL</p>
+                            <ul>
+                                <li>Conduct AI/ML research focused on robotic systems, embedded intelligence, and neural network development for real-time edge applications.</li>
+                                <li>Develop and evaluate machine learning models using Python, sensor-based datasets, signal processing, and feature extraction techniques.</li>
+                                <li>Support embedded AI deployment using Arduino, Raspberry Pi, and TinyML for robotics, health monitoring, and smart sensing applications.</li>
+                                <li>Assist with hardware-software integration, including sensor interfacing, microcontroller programming, data acquisition, and system troubleshooting.</li>
+                                <li>Process and analyze real-time sensor data to identify patterns, extract meaningful features, and support model training and performance evaluation.</li>
+                                <li>Contribute to intelligent edge systems by testing model behavior, refining workflows, and improving reliability across hardware platforms.</li>
+                                <li>Collaborate with research team members on technical integration, experimental setup, documentation, and problem-solving for AI-enabled robotic and sensing systems.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="experience-item">
+                        <div class="experience-org">Florida Institute of<br>Technology</div>
+                        <div class="experience-marker" aria-hidden="true"></div>
+                        <div class="experience-details">
+                            <span>Aug. 2025 - Present</span>
+                            <h3>Robotics Member</h3>
+                            <p class="org">Florida Institute of Technology - Melbourne, FL</p>
+                            <ul>
+                                <li>Contributed to the design and development of a lunar regolith collection robot for a NASA robotics competition, focused on excavation, transport, and mound formation.</li>
+                                <li>Collaborated with a multidisciplinary engineering team to prototype and refine robotic systems under strict competition constraints and timelines.</li>
+                                <li>Designed and tested mechanisms for efficient soil collection and controlled deposition to simulate lunar construction tasks.</li>
+                                <li>Assisted in integrating mechanical, electrical, and software subsystems to ensure reliable robot performance.</li>
+                                <li>Conducted iterative testing and troubleshooting to improve system durability and operational efficiency in simulated lunar conditions.</li>
+                                <li>Applied engineering principles to optimize robot mobility and traction on loose, granular terrain.</li>
+                                <li>Participated in system validation, identifying performance limitations and implementing design improvements.</li>
+                                <li>Supported development of control strategies for precise navigation and task execution.</li>
+                                <li>Contributed to documentation, design reviews, and technical discussions to align with competition requirements.</li>
+                                <li>Worked in a fast-paced, team-based environment to meet project deadlines leading up to a NASA-sponsored competition.</li>
+                                <li>Gained hands-on experience in robotics system integration, rapid prototyping, and engineering problem-solving.</li>
+                                <li>Demonstrated teamwork, communication, and adaptability while working on a complex, real-world engineering challenge.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="experience-item">
+                        <div class="experience-org">Defense Informatics LLC</div>
+                        <div class="experience-marker" aria-hidden="true"></div>
+                        <div class="experience-details">
+                            <span>Jun. 2025 - Aug. 2025</span>
+                            <h3>Data Analysis Intern</h3>
+                            <p class="org">Defense Informatics LLC - Melbourne, FL</p>
+                            <ul>
+                                <li>Analyzed data sets using Excel.</li>
+                                <li>Utilized Python to perform basic analyses and visualizations of complex data sets.</li>
+                                <li>Conducted comprehensive statistical analysis, uncovering hidden trends and patterns within the data.</li>
+                                <li>Implemented machine learning algorithms for predictive modeling, resulting in better decision-making capabilities.</li>
+                                <li>Utilized data visualization techniques to present and explain complex data sets.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="experience-item">
+                        <div class="experience-org">Florida Institute of<br>Technology</div>
+                        <div class="experience-marker" aria-hidden="true"></div>
+                        <div class="experience-details">
+                            <span>Jun. 2025 - Present</span>
+                            <h3>Girls Who Code President</h3>
+                            <p class="org">Florida Institute of Technology - Melbourne, FL</p>
+                            <ul>
+                                <li>Lead a student technology organization dedicated to expanding access to coding, engineering, and computing opportunities for women in STEM.</li>
+                                <li>Plan and facilitate technical workshops, coding projects, recruitment events, and professional development opportunities for chapter members.</li>
+                                <li>Manage chapter operations by organizing meetings, coordinating communications, delegating tasks, and supporting long-term club growth.</li>
+                                <li>Promote member involvement in programming, AI/ML, engineering projects, competitions, and outreach initiatives across campus.</li>
+                                <li>Strengthen leadership, public speaking, event planning, and team coordination skills while supporting an inclusive technical community.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="experience-item">
+                        <div class="experience-org">Viera Hospital</div>
+                        <div class="experience-marker" aria-hidden="true"></div>
+                        <div class="experience-details">
+                            <span>Jun. 2025 - Nov. 2025</span>
+                            <h3>Hospital Volunteer</h3>
+                            <p class="org">Viera Hospital - Viera, FL</p>
+                            <ul>
+                                <li>Prepared surgical equipment for clinical use by inspecting instruments, maintaining sterile handling practices, and assisting with proper storage and distribution.</li>
+                                <li>Supported sterile processing operations by helping organize, clean, and handle surgical instruments according to hospital safety and infection-control procedures.</li>
+                                <li>Assisted with the preparation and movement of instrument trays and medical supplies to help ensure availability for clinical and surgical teams.</li>
+                                <li>Gained hands-on healthcare experience in a hospital environment while observing the importance of accuracy, cleanliness, and patient safety.</li>
+                                <li>Developed strong attention to detail by carefully identifying instruments, following procedural steps, and maintaining organized work areas.</li>
+                                <li>Strengthened teamwork, communication, and professionalism while working alongside hospital staff in a fast-paced clinical support setting.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="experience-item">
+                        <div class="experience-org">Florida Institute of<br>Technology</div>
+                        <div class="experience-marker" aria-hidden="true"></div>
+                        <div class="experience-details">
+                            <span>Dec. 2023 - Present</span>
+                            <h3>Student Ambassador</h3>
+                            <p class="org">Florida Institute of Technology - Melbourne, FL</p>
+                            <ul>
+                                <li>Engaged prospective students through campus tours and informational sessions.</li>
+                                <li>Coordinated events promoting academic programs and student services.</li>
+                                <li>Facilitated communication between administration and student body to address concerns.</li>
+                                <li>Assisted in onboarding new ambassadors, providing training on best practices.</li>
+                                <li>Represented university at recruitment fairs, effectively conveying institutional values and offerings.</li>
+                                <li>Answered questions from visitors and potential students about university life.</li>
+                                <li>Contributed to a positive campus atmosphere by creating welcoming spaces for new students to connect with one another.</li>
+                                <li>Developed leadership skills through specialized training programs and university workshops.</li>
+                                <li>Supported student success through peer-to-peer mentorship, study tips, and course selection advice.</li>
+                                <li>Gained public speaking experience through regular presentations to diverse audiences about the benefits of attending the university.</li>
+                                <li>Reinforced university values of integrity, respect, innovation, excellence, and leadership through active role modeling.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="experience-item">
+                        <div class="experience-org">Florida Institute of<br>Technology</div>
+                        <div class="experience-marker" aria-hidden="true"></div>
+                        <div class="experience-details">
+                            <span>Aug. 2024 - Jan. 2025</span>
+                            <h3>Resident Assistant</h3>
+                            <p class="org">Florida Institute of Technology - Melbourne, FL</p>
+                            <ul>
+                                <li>Facilitated conflict resolution among residents by mediating discussions and proposing fair solutions.</li>
+                                <li>Coordinated educational programs and events to enhance resident engagement and development.</li>
+                                <li>Monitored residence hall safety procedures, ensuring compliance with university policies and regulations.</li>
+                                <li>Attended, participated, and contributed to monthly staff meetings addressing resident needs.</li>
+                                <li>Served as an approachable resource for residents seeking advice or assistance with personal or academic issues.</li>
+                                <li>Enhanced communication skills by mediating disputes and facilitating discussions between residents.</li>
+                                <li>Developed valuable life skills in residents, including time management, conflict resolution, and effective communication.</li>
+                                <li>Provided crisis management and intervention during emergency situations.</li>
+                                <li>Responded to student inquiries and concerns, offering support and guidance.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-band">
+            <div class="container stats-grid reveal">
+                <div>
+                    <i class="fas fa-graduation-cap"></i>
+                    <strong>2027</strong>
+                    <span>Expected graduation</span>
+                </div>
+                <div>
+                    <i class="fas fa-diagram-project"></i>
+                    <strong>3</strong>
+                    <span>Featured projects</span>
+                </div>
+                <div>
+                    <i class="fas fa-brain"></i>
+                    <strong>AI/ML</strong>
+                    <span>Research focus</span>
+                </div>
+                <div>
+                    <i class="fas fa-dna"></i>
+                    <strong>BME</strong>
+                    <span>Major + biology minor</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section education-section" id="education">
+            <div class="container education-layout reveal">
+                <div class="education-heading">
+                    <h2>Education</h2>
+                </div>
+                <div class="education-list">
+                    <article class="education-item">
+                        <span>Expected May 2027</span>
+                        <h3>Florida Institute of Technology</h3>
+                        <p>B.S. Biomedical Engineering, Minor in Biology</p>
+                    </article>
+                    <article class="education-item">
+                        <span>July 2025</span>
+                        <h3>Stanford University</h3>
+                        <p>Certificate: Supervised Machine Learning: Regression and Classification</p>
+                    </article>
+                    <article class="education-item">
+                        <span>May 2023</span>
+                        <h3>Eastern Florida State College</h3>
+                        <p>Associate of Arts</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-copy reveal">
+                    <h2>Let's connect</h2>
+                    <p>I am open to internships, research opportunities, and technical collaborations across biomedical engineering, robotics, sensing, and AI/ML.</p>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:allison.m.otero@gmail.com">allison.m.otero@gmail.com</a></li>
+                        <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/allisonotero/" target="_blank" rel="noopener">linkedin.com/in/allisonotero</a></li>
+                        <li><i class="fab fa-github"></i><a href="https://github.com/allison-otero" target="_blank" rel="noopener">github.com/allison-otero</a></li>
+                    </ul>
+                </div>
+
+                <form id="contact-form" class="contact-form reveal">
+                    <label>
+                        Name
+                        <input type="text" name="name" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" required>
+                    </label>
+                    <label>
+                        Message
+                        <textarea name="message" rows="5" required></textarea>
+                    </label>
+                    <button class="button primary" type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="successModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <h2 id="modal-title">Message sent</h2>
+            <p>Thank you for reaching out. Allison will get back to you soon.</p>
+            <button class="button primary" type="button" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <div id="contactPopup" class="contact-popup" role="dialog" aria-modal="true" aria-labelledby="contact-popup-title">
+        <div class="contact-popup-content">
+            <button class="contact-popup-close" type="button" aria-label="Close contact popup">&times;</button>
+            <p id="contact-popup-title">Contact</p>
+            <strong id="contact-popup-value"></strong>
+        </div>
+    </div>
+
+    <button class="back-to-top" type="button" aria-label="Back to home">
+        <span>Back to Home</span>
+    </button>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Portfolio | Allison Otero</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@formspree/ajax@1"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

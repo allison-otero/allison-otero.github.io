@@ -1,0 +1,9 @@
+.agents/
+.codex/
+.video_tools/
+video_tools/
+
+# Unused source/video working files
+assets/nasa-regolith/*.mov
+assets/nasa-regolith/proof-of-life-luna2026.mp4
+assets/nasa-regolith/robot-clip-2.mp4
