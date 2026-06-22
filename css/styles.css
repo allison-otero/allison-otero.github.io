@@ -1866,24 +1866,57 @@ progress::-moz-progress-bar {
 }
 
 @media (max-width: 860px) {
+    body.nav-open {
+        overflow: auto;
+    }
+
+    .top-nav {
+        align-content: flex-start;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 92px;
+        padding-bottom: 12px;
+    }
+
     .menu-toggle {
         display: flex;
+        position: relative;
+        z-index: 130;
     }
 
     .nav-links {
-        background: var(--purple-dark);
+        background: rgba(39, 27, 96, 0.98);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        box-shadow: 0 18px 40px rgba(28, 18, 74, 0.28);
         display: none;
         flex-direction: column;
-        gap: 16px;
+        gap: 0;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         left: 0;
-        padding: 20px;
-        position: absolute;
-        top: 92px;
+        margin-top: 10px;
+        padding: 8px;
+        position: static;
+        right: auto;
+        top: auto;
         width: 100%;
+        z-index: 120;
     }
 
     .nav-links.active {
-        display: flex;
+        display: grid;
+    }
+
+    .nav-links a {
+        display: block;
+        font-size: 0.76rem;
+        padding: 12px 14px;
+        text-align: center;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
     }
 
     .hero-inner,
