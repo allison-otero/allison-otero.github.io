@@ -1078,23 +1078,19 @@ progress::-moz-progress-bar {
     line-height: 1.6;
 }
 
-.credential-trigger {
-    background: transparent;
-    border: 0;
-    border-bottom: 1px solid rgba(87, 66, 184, 0.38);
+.credential-link {
+    border-bottom: 1px solid rgba(87, 66, 184, 0.28);
     color: var(--purple);
-    cursor: pointer;
-    font-size: 0.78rem;
-    font-weight: 800;
+    font-size: 0.72rem;
+    font-weight: 500;
     justify-self: start;
-    letter-spacing: 0.01em;
-    margin-top: 4px;
-    padding: 0 0 2px;
-    text-transform: uppercase;
+    margin-top: 2px;
+    padding-bottom: 1px;
+    text-decoration: none;
 }
 
-.credential-trigger:hover,
-.credential-trigger:focus-visible {
+.credential-link:hover,
+.credential-link:focus-visible {
     border-bottom-color: var(--purple);
     color: var(--purple-deep);
 }
@@ -1784,8 +1780,7 @@ progress::-moz-progress-bar {
     z-index: 110;
 }
 
-.contact-popup.active,
-.credential-popup.active {
+.contact-popup.active {
     display: flex;
 }
 
@@ -1823,55 +1818,6 @@ progress::-moz-progress-bar {
     display: block;
     font-size: 1.35rem;
     overflow-wrap: anywhere;
-}
-
-.credential-popup {
-    align-items: center;
-    background: rgba(30, 20, 70, 0.78);
-    display: none;
-    inset: 0;
-    justify-content: center;
-    padding: 24px;
-    position: fixed;
-    z-index: 110;
-}
-
-.credential-popup-content {
-    background: #fff;
-    color: var(--text);
-    max-width: 440px;
-    padding: 34px;
-    position: relative;
-    text-align: center;
-    width: 100%;
-}
-
-.credential-popup-close {
-    background: transparent;
-    border: 0;
-    color: var(--purple);
-    cursor: pointer;
-    font-size: 1.8rem;
-    line-height: 1;
-    position: absolute;
-    right: 16px;
-    top: 12px;
-}
-
-.credential-popup-content p {
-    color: var(--purple);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.credential-popup-content h2 {
-    color: var(--purple);
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-bottom: 20px;
 }
 
 .back-to-top {

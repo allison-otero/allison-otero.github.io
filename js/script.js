@@ -8,12 +8,6 @@ const contactPopupValue = document.getElementById('contact-popup-value');
 const contactPopupClose = document.querySelector('.contact-popup-close');
 const contactPopupTriggers = document.querySelectorAll('.contact-popup-trigger');
 const backToTop = document.querySelector('.back-to-top');
-const credentialPopup = document.getElementById('credentialPopup');
-const credentialPopupTitle = document.getElementById('credential-popup-title');
-const credentialPopupProvider = document.getElementById('credential-popup-provider');
-const credentialPopupLink = document.getElementById('credential-popup-link');
-const credentialPopupClose = document.querySelector('.credential-popup-close');
-const credentialPopupTriggers = document.querySelectorAll('.credential-trigger');
 
 function showModal() {
     modal.style.display = 'flex';
@@ -26,12 +20,6 @@ function closeModal() {
 function closeContactPopup() {
     if (contactPopup) {
         contactPopup.classList.remove('active');
-    }
-}
-
-function closeCredentialPopup() {
-    if (credentialPopup) {
-        credentialPopup.classList.remove('active');
     }
 }
 
@@ -77,21 +65,8 @@ contactPopupTriggers.forEach((trigger) => {
     });
 });
 
-credentialPopupTriggers.forEach((trigger) => {
-    trigger.addEventListener('click', () => {
-        credentialPopupTitle.textContent = trigger.dataset.credentialTitle;
-        credentialPopupProvider.textContent = trigger.dataset.credentialProvider;
-        credentialPopupLink.href = trigger.dataset.credentialUrl;
-        credentialPopup.classList.add('active');
-    });
-});
-
 if (contactPopupClose) {
     contactPopupClose.addEventListener('click', closeContactPopup);
-}
-
-if (credentialPopupClose) {
-    credentialPopupClose.addEventListener('click', closeCredentialPopup);
 }
 
 if (contactPopup) {
@@ -102,18 +77,9 @@ if (contactPopup) {
     });
 }
 
-if (credentialPopup) {
-    credentialPopup.addEventListener('click', (event) => {
-        if (event.target === credentialPopup) {
-            closeCredentialPopup();
-        }
-    });
-}
-
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
         closeContactPopup();
-        closeCredentialPopup();
     }
 });
 
