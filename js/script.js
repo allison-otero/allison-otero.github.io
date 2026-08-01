@@ -101,20 +101,12 @@ if (backToTop) {
     });
 }
 
-experienceItems.forEach((item, index) => {
+experienceItems.forEach((item) => {
     const marker = item.querySelector('.experience-marker');
-    const markerLabel = marker ? marker.querySelector('span') : null;
+    const markerLabel = marker ? marker.querySelector('.experience-toggle') : null;
 
     if (!marker) {
         return;
-    }
-
-    if (index === 0) {
-        item.classList.add('is-open');
-        marker.setAttribute('aria-expanded', 'true');
-        if (markerLabel) {
-            markerLabel.textContent = 'View Less';
-        }
     }
 
     marker.addEventListener('click', () => {

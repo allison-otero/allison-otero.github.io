@@ -620,137 +620,139 @@ progress::-moz-progress-bar {
 }
 
 .experience-timeline {
-    margin: 32px auto 0;
-    max-width: 1040px;
-    position: relative;
-}
-
-.experience-timeline::before {
-    background: #d4d0df;
-    bottom: 0;
-    content: '';
-    left: 43%;
-    position: absolute;
-    top: 0;
-    width: 3px;
+    border-top: 1px solid var(--line);
+    margin: 34px auto 0;
+    max-width: 1080px;
 }
 
 .experience-item {
-    display: grid;
-    gap: 36px;
-    grid-template-columns: minmax(300px, 0.95fr) 108px minmax(0, 1.35fr);
-    padding: 30px 0 44px;
+    border-bottom: 1px solid var(--line);
     position: relative;
-}
-
-.experience-role {
-    align-items: center;
-    display: flex;
-    justify-content: flex-end;
-    min-height: 54px;
-    padding-right: 46px;
-    position: relative;
-    text-align: right;
-}
-
-.experience-role::after {
-    background: #d7d7d7;
-    content: '';
-    height: 2px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    width: 34px;
-}
-
-.experience-role h3 {
-    color: var(--purple);
-    font-size: clamp(1.1rem, 2vw, 1.85rem);
-    font-weight: 800;
-    letter-spacing: 0;
-    line-height: 1.05;
-    margin: 0;
-    max-width: 280px;
-    text-transform: uppercase;
-    text-wrap: balance;
 }
 
 .experience-marker {
     align-items: center;
     background: transparent;
     border: 0;
-    color: var(--purple);
+    color: inherit;
     cursor: pointer;
     display: flex;
-    flex-direction: column;
-    gap: 7px;
-    justify-content: flex-start;
-    min-height: 54px;
-    padding: 0;
+    gap: 30px;
+    padding: 26px 18px;
     position: relative;
-    text-align: center;
+    text-align: left;
+    transition: background 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+    width: 100%;
 }
 
 .experience-marker::after {
-    border-bottom: 10px solid transparent;
-    border-left: 12px solid var(--purple);
-    border-top: 10px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 9px solid var(--purple);
+    border-top: 7px solid transparent;
     content: '';
-    margin-top: 10px;
-    position: relative;
-    transition: transform 0.25s ease;
-    transform-origin: 4px 10px;
+    flex: 0 0 auto;
+    transition: transform 0.22s ease;
 }
 
-.experience-marker span {
-    color: #8c88a0;
-    font-size: 0.62rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: color 0.2s ease;
-    white-space: nowrap;
-}
-
-.experience-marker:hover span,
-.experience-marker:focus-visible span,
-.experience-item.is-open .experience-marker span {
-    color: var(--purple);
+.experience-marker:hover,
+.experience-marker:focus-visible,
+.experience-item.is-open .experience-marker {
+    background: rgba(87, 66, 184, 0.055);
+    box-shadow: inset 4px 0 0 var(--purple);
 }
 
 .experience-marker:focus-visible {
-    outline: 2px solid rgba(87, 66, 184, 0.35);
-    outline-offset: 5px;
+    outline: 2px solid rgba(87, 66, 184, 0.28);
+    outline-offset: -2px;
 }
 
 .experience-item.is-open .experience-marker::after {
     transform: rotate(90deg);
 }
 
-.experience-details {
-    padding: 0 0 0 4px;
-}
-
-.experience-details span {
-    color: #8c8c8c;
-    display: block;
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.experience-details h3 {
+.experience-icon {
+    align-items: center;
+    background: #f1effa;
+    border-radius: 50%;
     color: var(--purple);
-    font-size: 1.25rem;
+    display: flex;
+    flex: 0 0 58px;
+    font-size: 1.35rem;
+    height: 58px;
+    justify-content: center;
+    transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease;
+    width: 58px;
+}
+
+.experience-marker:hover .experience-icon,
+.experience-marker:focus-visible .experience-icon,
+.experience-item.is-open .experience-icon {
+    background: var(--purple);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.experience-role {
+    border-left: 1px solid #dcd9e8;
+    flex: 1 1 auto;
+    padding-left: 30px;
+}
+
+.experience-role h3 {
+    color: var(--purple);
+    font-size: clamp(1.05rem, 1.8vw, 1.35rem);
     font-weight: 800;
     letter-spacing: 0;
-    margin-bottom: 8px;
+    line-height: 1.2;
+    margin: 0;
+    text-transform: none;
+    text-wrap: balance;
+}
+
+.experience-date {
+    align-items: center;
+    color: #6f6c84;
+    display: flex;
+    flex: 0 0 230px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.experience-date i {
+    color: var(--purple);
+    font-size: 1.05rem;
+}
+
+.experience-toggle {
+    color: #8c88a0;
+    flex: 0 0 78px;
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-align: right;
     text-transform: uppercase;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+.experience-marker:hover .experience-toggle,
+.experience-marker:focus-visible .experience-toggle,
+.experience-item.is-open .experience-toggle {
+    color: var(--purple);
+}
+
+.experience-details {
+    max-height: 900px;
+    opacity: 1;
+    overflow: hidden;
+    padding: 0 96px 28px 106px;
+    transition: max-height 0.32s ease, opacity 0.22s ease, padding 0.25s ease;
 }
 
 .experience-details .org {
     color: var(--text);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 800;
     margin-bottom: 14px;
     margin-top: 0;
@@ -761,10 +763,6 @@ progress::-moz-progress-bar {
     font-size: 0.95rem;
     line-height: 1.65;
     margin: 0 0 0 20px;
-    max-height: 780px;
-    opacity: 1;
-    overflow: hidden;
-    transition: max-height 0.32s ease, opacity 0.22s ease, padding-top 0.25s ease;
 }
 
 .experience-details li + li {
@@ -772,12 +770,14 @@ progress::-moz-progress-bar {
 }
 
 .experience-item:not(.is-open) .experience-details ul {
-    max-height: 0;
-    opacity: 0;
+    max-height: none;
 }
 
-.experience-item:not(.is-open) .experience-details .org {
-    margin-bottom: 0;
+.experience-item:not(.is-open) .experience-details {
+    max-height: 0;
+    opacity: 0;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 .project-showcase {
@@ -2007,51 +2007,50 @@ progress::-moz-progress-bar {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-
-    .experience-timeline::before {
-        left: 16px;
-    }
-
     .experience-item {
-        gap: 12px 18px;
-        grid-template-columns: 34px minmax(0, 1fr);
-        padding-left: 0;
-    }
-
-    .experience-role {
-        grid-column: 2;
-        justify-content: flex-start;
-        min-height: auto;
-        padding-right: 0;
-        text-align: left;
-    }
-
-    .experience-role::after {
-        display: none;
-    }
-
-    .experience-role h3 {
-        max-width: none;
+        display: block;
     }
 
     .experience-marker {
-        grid-column: 1;
-        grid-row: 1 / span 3;
-        justify-content: flex-start;
-        min-height: 42px;
+        align-items: flex-start;
+        display: grid;
+        gap: 12px 18px;
+        grid-template-columns: 58px minmax(0, 1fr) auto;
+        padding: 22px 4px;
+    }
+
+    .experience-icon {
+        grid-row: 1 / span 2;
+    }
+
+    .experience-role {
+        border-left: 0;
+        padding-left: 0;
+    }
+
+    .experience-date {
+        flex: 0 1 auto;
+        font-size: 0.86rem;
+        grid-column: 2 / span 2;
+    }
+
+    .experience-toggle {
+        align-self: center;
+        flex-basis: auto;
+        grid-column: 3;
+        grid-row: 1;
     }
 
     .experience-marker::after {
-        margin-top: 8px;
-    }
-
-    .experience-marker span {
-        writing-mode: vertical-rl;
+        align-self: center;
+        grid-column: 3;
+        grid-row: 2;
+        justify-self: end;
     }
 
     .experience-details {
-        grid-column: 2;
-        padding-left: 0;
+        padding-left: 76px;
+        padding-right: 8px;
     }
 
     .feature-grid {
