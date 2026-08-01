@@ -8,6 +8,7 @@ const contactPopupValue = document.getElementById('contact-popup-value');
 const contactPopupClose = document.querySelector('.contact-popup-close');
 const contactPopupTriggers = document.querySelectorAll('.contact-popup-trigger');
 const backToTop = document.querySelector('.back-to-top');
+const experienceItems = document.querySelectorAll('.experience-item');
 
 function showModal() {
     modal.style.display = 'flex';
@@ -99,6 +100,24 @@ if (backToTop) {
         });
     });
 }
+
+experienceItems.forEach((item, index) => {
+    const marker = item.querySelector('.experience-marker');
+
+    if (!marker) {
+        return;
+    }
+
+    if (index === 0) {
+        item.classList.add('is-open');
+        marker.setAttribute('aria-expanded', 'true');
+    }
+
+    marker.addEventListener('click', () => {
+        const isOpen = item.classList.toggle('is-open');
+        marker.setAttribute('aria-expanded', String(isOpen));
+    });
+});
 
 function reveal() {
     const reveals = document.querySelectorAll('.reveal');

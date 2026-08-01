@@ -673,8 +673,12 @@ progress::-moz-progress-bar {
 
 .experience-marker {
     align-items: flex-start;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
     display: flex;
     justify-content: center;
+    padding: 0;
     position: relative;
 }
 
@@ -686,6 +690,7 @@ progress::-moz-progress-bar {
     height: 17px;
     margin-top: 10px;
     position: relative;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
     width: 17px;
     z-index: 1;
 }
@@ -698,6 +703,23 @@ progress::-moz-progress-bar {
     margin-left: 26px;
     margin-top: 11px;
     position: absolute;
+    transition: transform 0.25s ease;
+    transform-origin: 4px 10px;
+}
+
+.experience-marker:hover::before,
+.experience-marker:focus-visible::before,
+.experience-item.is-open .experience-marker::before {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 5px rgba(89, 66, 184, 0.12);
+}
+
+.experience-marker:focus-visible {
+    outline: none;
+}
+
+.experience-item.is-open .experience-marker::after {
+    transform: rotate(90deg);
 }
 
 .experience-details {
@@ -726,17 +748,40 @@ progress::-moz-progress-bar {
     font-size: 0.95rem;
     font-weight: 700;
     margin-bottom: 14px;
+    margin-top: 0;
+    max-height: 80px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 0.25s ease, margin-bottom 0.25s ease, opacity 0.2s ease;
 }
 
 .experience-details ul {
     color: var(--text);
     font-size: 0.95rem;
     line-height: 1.65;
-    margin-left: 20px;
+    margin: 0 0 0 20px;
+    max-height: 780px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 0.32s ease, opacity 0.22s ease, padding-top 0.25s ease;
 }
 
 .experience-details li + li {
     margin-top: 6px;
+}
+
+.experience-item:not(.is-open) .experience-details .org,
+.experience-item:not(.is-open) .experience-details ul {
+    max-height: 0;
+    opacity: 0;
+}
+
+.experience-item:not(.is-open) .experience-details .org {
+    margin-bottom: 0;
+}
+
+.experience-item:not(.is-open) .experience-details h3 {
+    margin-bottom: 0;
 }
 
 .project-showcase {
