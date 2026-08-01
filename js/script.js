@@ -103,6 +103,7 @@ if (backToTop) {
 
 experienceItems.forEach((item, index) => {
     const marker = item.querySelector('.experience-marker');
+    const markerLabel = marker ? marker.querySelector('span') : null;
 
     if (!marker) {
         return;
@@ -111,11 +112,17 @@ experienceItems.forEach((item, index) => {
     if (index === 0) {
         item.classList.add('is-open');
         marker.setAttribute('aria-expanded', 'true');
+        if (markerLabel) {
+            markerLabel.textContent = 'View Less';
+        }
     }
 
     marker.addEventListener('click', () => {
         const isOpen = item.classList.toggle('is-open');
         marker.setAttribute('aria-expanded', String(isOpen));
+        if (markerLabel) {
+            markerLabel.textContent = isOpen ? 'View Less' : 'View More';
+        }
     });
 });
 
