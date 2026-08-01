@@ -1080,22 +1080,23 @@ progress::-moz-progress-bar {
 
 .credential-trigger {
     background: transparent;
-    border: 1px solid var(--purple);
+    border: 0;
+    border-bottom: 1px solid rgba(87, 66, 184, 0.38);
     color: var(--purple);
     cursor: pointer;
-    font-size: 0.68rem;
+    font-size: 0.78rem;
     font-weight: 800;
     justify-self: start;
-    letter-spacing: 0.04em;
-    margin-top: 8px;
-    padding: 9px 12px;
+    letter-spacing: 0.01em;
+    margin-top: 4px;
+    padding: 0 0 2px;
     text-transform: uppercase;
 }
 
 .credential-trigger:hover,
 .credential-trigger:focus-visible {
-    background: var(--purple);
-    color: #fff;
+    border-bottom-color: var(--purple);
+    color: var(--purple-deep);
 }
 
 .contact-section {
