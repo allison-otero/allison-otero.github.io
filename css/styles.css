@@ -1078,6 +1078,26 @@ progress::-moz-progress-bar {
     line-height: 1.6;
 }
 
+.credential-trigger {
+    background: transparent;
+    border: 1px solid var(--purple);
+    color: var(--purple);
+    cursor: pointer;
+    font-size: 0.68rem;
+    font-weight: 800;
+    justify-self: start;
+    letter-spacing: 0.04em;
+    margin-top: 8px;
+    padding: 9px 12px;
+    text-transform: uppercase;
+}
+
+.credential-trigger:hover,
+.credential-trigger:focus-visible {
+    background: var(--purple);
+    color: #fff;
+}
+
 .contact-section {
     background: var(--section-lavender);
     background-size: 34px 34px, auto;
@@ -1763,7 +1783,8 @@ progress::-moz-progress-bar {
     z-index: 110;
 }
 
-.contact-popup.active {
+.contact-popup.active,
+.credential-popup.active {
     display: flex;
 }
 
@@ -1801,6 +1822,55 @@ progress::-moz-progress-bar {
     display: block;
     font-size: 1.35rem;
     overflow-wrap: anywhere;
+}
+
+.credential-popup {
+    align-items: center;
+    background: rgba(30, 20, 70, 0.78);
+    display: none;
+    inset: 0;
+    justify-content: center;
+    padding: 24px;
+    position: fixed;
+    z-index: 110;
+}
+
+.credential-popup-content {
+    background: #fff;
+    color: var(--text);
+    max-width: 440px;
+    padding: 34px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.credential-popup-close {
+    background: transparent;
+    border: 0;
+    color: var(--purple);
+    cursor: pointer;
+    font-size: 1.8rem;
+    line-height: 1;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+}
+
+.credential-popup-content p {
+    color: var(--purple);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.credential-popup-content h2 {
+    color: var(--purple);
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 
 .back-to-top {
