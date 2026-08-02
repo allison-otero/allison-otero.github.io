@@ -9,6 +9,7 @@ const contactPopupClose = document.querySelector('.contact-popup-close');
 const contactPopupTriggers = document.querySelectorAll('.contact-popup-trigger');
 const backToTop = document.querySelector('.back-to-top');
 const experienceItems = document.querySelectorAll('.experience-item');
+const autoplayVideos = document.querySelectorAll('.local-video-grid video[autoplay]');
 
 function showModal() {
     modal.style.display = 'flex';
@@ -101,6 +102,14 @@ if (backToTop) {
     });
 }
 
+function startAutoplayVideos() {
+    autoplayVideos.forEach((video) => {
+        video.muted = true;
+        video.defaultMuted = true;
+        video.play().catch(() => {});
+    });
+}
+
 experienceItems.forEach((item) => {
     const marker = item.querySelector('.experience-marker');
     const markerLabel = marker ? marker.querySelector('.experience-toggle') : null;
@@ -135,5 +144,7 @@ window.addEventListener('scroll', reveal);
 window.addEventListener('scroll', updateBackToTop);
 window.addEventListener('load', reveal);
 window.addEventListener('load', updateBackToTop);
+window.addEventListener('load', startAutoplayVideos);
 reveal();
 updateBackToTop();
+startAutoplayVideos();
