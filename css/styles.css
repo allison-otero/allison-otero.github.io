@@ -800,6 +800,41 @@ progress::-moz-progress-bar {
     transform: translateY(-6px);
 }
 
+.project-card.featured-project {
+    box-shadow: 0 14px 30px rgba(87, 66, 184, 0.16);
+    outline: 2px solid var(--purple);
+    outline-offset: 6px;
+    position: relative;
+}
+
+.project-card.featured-project:hover {
+    box-shadow: 0 22px 44px rgba(87, 66, 184, 0.24);
+    outline-color: #40309b;
+}
+
+.project-card .featured-project-badge {
+    align-items: center;
+    background: var(--purple);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    color: #fff;
+    display: inline-flex;
+    font-size: 0.66rem;
+    font-weight: 800;
+    gap: 6px;
+    letter-spacing: 0.045em;
+    margin: 0;
+    padding: 7px 10px;
+    position: absolute;
+    right: 12px;
+    text-transform: uppercase;
+    top: 12px;
+    z-index: 2;
+}
+
+.featured-project-badge i {
+    font-size: 0.64rem;
+}
+
 .project-card.large {
     grid-column: span 1;
 }
