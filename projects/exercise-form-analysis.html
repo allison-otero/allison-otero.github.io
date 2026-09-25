@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="sEMG exercise-form analysis project by Allison Otero and Essie Fisher.">
+    <title>Exercise-Form Analysis | Allison Otero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="project-page">
+    <header class="case-hero">
+        <nav class="top-nav" aria-label="Project navigation">
+            <a class="nav-back-link" href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            <ul class="nav-links case-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../docs/Allison_Otero_Resume.pdf?v=20260919-title">Resume</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container case-hero-inner">
+            <p class="hero-kicker">sEMG + Movement Feedback</p>
+            <h1>Exercise-Form Analysis</h1>
+            <p>An exploratory instrumentation project translating muscle-activation features into movement-quality feedback across five labeled exercise conditions.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-section">
+            <div class="container case-grid">
+                <aside class="case-meta">
+                    <div>
+                        <span>Roles</span>
+                        <p>sEMG acquisition, CSV logging, signal processing, feature extraction, classification logic</p>
+                    </div>
+                    <div>
+                        <span>Collaboration</span>
+                        <p>Instrumentation final project with Essie Fisher</p>
+                    </div>
+                    <div>
+                        <span>Tools</span>
+                        <p>MyoWare, Elegoo Uno R3, Arduino serial, Python, CSV, moving-average smoothing</p>
+                    </div>
+                    <div>
+                        <span>Conditions</span>
+                        <p>Good form, weak contraction, jerky motion, partial extension, fast motion</p>
+                    </div>
+                </aside>
+
+                <div class="case-content">
+                    <div class="case-intro-card">
+                        <span>Project Overview</span>
+                        <p>This project explored whether muscle-activation patterns could support feedback about exercise consistency and movement quality. The system recorded labeled sEMG trials, processed short windows in Python, extracted descriptive features, and returned a form label or an uncertain result when the closest profiles were too similar.</p>
+                    </div>
+
+                    <figure class="project-figure project-figure-wide">
+                        <img src="../assets/exercise-form/live-classification-demo.jpg" alt="Live exercise-form demonstration with a MyoWare sensor and classification output on a monitor.">
+                        <figcaption>Recorded project demonstration showing live sEMG acquisition and movement-form output.</figcaption>
+                    </figure>
+
+                    <h2>Recorded Trial Evidence</h2>
+                    <figure class="project-figure project-figure-wide">
+                        <img src="../assets/exercise-form/recorded-trials.png" alt="Recorded EMG signals for good form, jerky motion, partial extension, weak contraction, and fast motion.">
+                        <figcaption>Thirty-second recordings for the five labeled conditions show differences in activation consistency and signal variation.</figcaption>
+                    </figure>
+
+                    <h2>Acquisition &amp; Analysis</h2>
+                    <ol class="workflow-list">
+                        <li>Capture muscle activity with a MyoWare sensor and surface electrodes.</li>
+                        <li>Verify serial readings through the Uno-compatible microcontroller.</li>
+                        <li>Log labeled trials to CSV for repeatable analysis.</li>
+                        <li>Apply windowing and moving-average smoothing in Python.</li>
+                        <li>Extract RMS, variance, and peak-count features.</li>
+                        <li>Compare features with class reference profiles using standardized distance.</li>
+                        <li>Return a form label or an uncertain result when the comparison is too close.</li>
+                    </ol>
+
+                    <h2>Classifier Output</h2>
+                    <div class="project-evidence-grid compact-evidence-grid">
+                        <figure class="project-figure">
+                            <img src="../assets/exercise-form/classification-output-a.png" alt="Console output showing jerky motion, good form, partial extension, and uncertain classifications.">
+                            <figcaption>Example classifications across multiple trial conditions.</figcaption>
+                        </figure>
+                        <figure class="project-figure">
+                            <img src="../assets/exercise-form/classification-output-b.png" alt="Console output showing fast motion, jerky motion, and uncertain classifications.">
+                            <figcaption>The logic can return an uncertain result instead of forcing a close decision.</figcaption>
+                        </figure>
+                    </div>
+
+                    <h2>Project Scope</h2>
+                    <p>This was an exploratory laboratory prototype. It demonstrated the complete acquisition-to-feedback workflow, but independent classification accuracy and generalization across users have not been established.</p>
+
+                    <h2>Future Improvements</h2>
+                    <ul>
+                        <li>Collect repeated trials across more participants and sessions.</li>
+                        <li>Standardize electrode placement and contraction protocols.</li>
+                        <li>Evaluate the classifier with a held-out test set.</li>
+                        <li>Compare the distance-based approach with supervised machine learning models.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <button class="back-to-top" type="button" aria-label="Back to top"><span>Back to Top</span></button>
+    <script src="../js/script.js"></script>
+</body>
+</html>

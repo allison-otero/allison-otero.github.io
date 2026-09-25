@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Analog filter circuit design and measurement case study by Allison Otero.">
+    <title>Analog Filter Circuits | Allison Otero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="project-page">
+    <header class="case-hero">
+        <nav class="top-nav" aria-label="Project navigation">
+            <a class="nav-back-link" href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            <ul class="nav-links case-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../docs/Allison_Otero_Resume.pdf?v=20260919-title">Resume</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container case-hero-inner">
+            <p class="hero-kicker">Circuit Design + Instrumentation</p>
+            <h1>Analog Filter Circuits</h1>
+            <p>Hands-on construction and measurement of high-pass, low-pass, and band-pass circuits for frequency-selective signal conditioning.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-section">
+            <div class="container case-grid">
+                <aside class="case-meta">
+                    <div>
+                        <span>Roles</span>
+                        <p>Circuit assembly, bench testing, frequency-response measurement, result interpretation</p>
+                    </div>
+                    <div>
+                        <span>Tools</span>
+                        <p>NI myDAQ, NI ELVISmx Bode Analyzer, breadboard, resistors, capacitors, operational amplifiers</p>
+                    </div>
+                    <div>
+                        <span>Methods</span>
+                        <p>High-pass, low-pass, and band-pass filtering; gain and phase measurement</p>
+                    </div>
+                    <div>
+                        <span>Context</span>
+                        <p>Biomedical instrumentation laboratory</p>
+                    </div>
+                </aside>
+
+                <div class="case-content">
+                    <div class="case-intro-card">
+                        <span>Project Overview</span>
+                        <p>This laboratory project connected circuit theory with measured hardware behavior. I built analog filter circuits on a breadboard, used an NI myDAQ to excite and measure each circuit, and reviewed Bode responses to determine how useful frequency ranges were passed or attenuated.</p>
+                    </div>
+
+                    <div class="project-evidence-grid">
+                        <figure class="project-figure">
+                            <img src="../assets/analog-filters/filter-bench-low-pass.jpg" alt="NI myDAQ connected to a breadboard analog filter circuit.">
+                            <figcaption>Low-pass circuit bench setup with the NI myDAQ and breadboard prototype.</figcaption>
+                        </figure>
+                        <figure class="project-figure">
+                            <img src="../assets/analog-filters/filter-bench-band-pass.jpg" alt="Second analog filter breadboard connected to an NI myDAQ.">
+                            <figcaption>Additional filter configuration prepared for frequency-response testing.</figcaption>
+                        </figure>
+                    </div>
+
+                    <h2>Measured Frequency Response</h2>
+                    <p>The Bode Analyzer swept the circuits from 5 Hz to 20 kHz with 10 measurement steps per decade. The resulting gain and phase plots provided direct evidence of each circuit's frequency-selective behavior.</p>
+                    <div class="project-evidence-grid">
+                        <figure class="project-figure">
+                            <img src="../assets/analog-filters/low-pass-response.png" alt="Measured low-pass filter gain and phase response from NI ELVISmx.">
+                            <figcaption>The low-pass response remains near 0 dB at lower frequencies before rolling off as frequency increases.</figcaption>
+                        </figure>
+                        <figure class="project-figure">
+                            <img src="../assets/analog-filters/band-pass-response.png" alt="Measured band-pass filter gain and phase response from NI ELVISmx.">
+                            <figcaption>The band-pass response peaks in the midband while attenuating frequencies on both sides.</figcaption>
+                        </figure>
+                    </div>
+
+                    <h2>Engineering Workflow</h2>
+                    <ol class="workflow-list">
+                        <li>Selected component values and assembled each circuit on a breadboard.</li>
+                        <li>Connected the input and output channels to the NI myDAQ.</li>
+                        <li>Applied a controlled logarithmic frequency sweep through NI ELVISmx.</li>
+                        <li>Compared measured gain and phase behavior across filter configurations.</li>
+                        <li>Used the results to connect physical circuit behavior with filtering concepts.</li>
+                    </ol>
+
+                    <h2>Skills Demonstrated</h2>
+                    <ul>
+                        <li>Analog circuit construction and breadboard troubleshooting.</li>
+                        <li>Instrumentation setup and channel verification.</li>
+                        <li>Bode plot interpretation and frequency-response analysis.</li>
+                        <li>Connecting theoretical filter behavior to measured hardware results.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <button class="back-to-top" type="button" aria-label="Back to top"><span>Back to Top</span></button>
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Muscle-controlled servo sensor integration project by Allison Otero.">
+    <title>Muscle-Controlled Servo | Allison Otero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="project-page">
+    <header class="case-hero">
+        <nav class="top-nav" aria-label="Project navigation">
+            <a class="nav-back-link" href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            <ul class="nav-links case-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../docs/Allison_Otero_Resume.pdf?v=20260919-title">Resume</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container case-hero-inner">
+            <p class="hero-kicker">Sensor-to-Actuator Integration</p>
+            <h1>Muscle-Controlled Servo</h1>
+            <p>A working bench prototype that converts surface muscle activity into visible servo motion through sensing, microcontroller logic, and electromechanical actuation.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-section">
+            <div class="container case-grid">
+                <aside class="case-meta">
+                    <div>
+                        <span>Roles</span>
+                        <p>Sensor placement, circuit wiring, microcontroller integration, servo testing</p>
+                    </div>
+                    <div>
+                        <span>Tools</span>
+                        <p>MyoWare muscle sensor, surface electrodes, Elegoo Uno R3, micro servo, breadboard</p>
+                    </div>
+                    <div>
+                        <span>Signals</span>
+                        <p>Surface muscle activity and threshold-based actuator control</p>
+                    </div>
+                    <div>
+                        <span>Context</span>
+                        <p>Biomedical instrumentation laboratory</p>
+                    </div>
+                </aside>
+
+                <div class="case-content">
+                    <div class="case-intro-card">
+                        <span>Project Overview</span>
+                        <p>This project demonstrated a complete sensor-to-actuator pathway. Surface electrodes and a MyoWare sensor detected muscle contraction, an Uno-compatible microcontroller interpreted the signal, and a micro servo produced a visible mechanical response.</p>
+                    </div>
+
+                    <figure class="project-figure project-figure-wide">
+                        <img src="../assets/muscle-servo/muscle-servo-setup.jpg" alt="MyoWare muscle sensor attached to an arm and connected to an Elegoo Uno R3, breadboard, and micro servo.">
+                        <figcaption>Integrated laboratory setup with surface electrodes, MyoWare sensing, microcontroller wiring, and servo output.</figcaption>
+                    </figure>
+
+                    <h2>Signal-to-Motion Path</h2>
+                    <div class="feature-grid">
+                        <div><strong>Detect</strong><span>Surface electrodes capture muscle activity through the MyoWare sensor.</span></div>
+                        <div><strong>Interface</strong><span>The microcontroller reads the sensor signal and applies the control logic.</span></div>
+                        <div><strong>Actuate</strong><span>The servo moves in response to contraction, creating a visible output.</span></div>
+                        <div><strong>Verify</strong><span>Repeated contractions confirm the response across the integrated signal path.</span></div>
+                    </div>
+
+                    <h2>Integration Work</h2>
+                    <p>The project required more than reading a sensor. Electrode contact, wiring, signal stability, power, and servo behavior all had to work together. Testing the complete setup reinforced the importance of checking each interface before evaluating overall system performance.</p>
+                    <ul>
+                        <li>Positioned surface electrodes and connected the MyoWare sensor.</li>
+                        <li>Integrated analog sensor input with microcontroller logic.</li>
+                        <li>Wired and tested a micro servo as the physical output.</li>
+                        <li>Troubleshot the full pathway from contraction to actuator response.</li>
+                    </ul>
+
+                    <h2>Skills Demonstrated</h2>
+                    <ul>
+                        <li>Physiological sensor interfacing and electrode setup.</li>
+                        <li>Arduino-compatible microcontroller wiring and programming.</li>
+                        <li>Hardware-software integration and bench troubleshooting.</li>
+                        <li>Translating a biological signal into a controlled mechanical action.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <button class="back-to-top" type="button" aria-label="Back to top"><span>Back to Top</span></button>
+    <script src="../js/script.js"></script>
+</body>
+</html>

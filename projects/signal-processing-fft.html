@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MATLAB and Python signal processing and FFT case study by Allison Otero.">
+    <title>MATLAB + Python Signal Processing | Allison Otero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="project-page">
+    <header class="case-hero">
+        <nav class="top-nav" aria-label="Project navigation">
+            <a class="nav-back-link" href="../index.html#projects"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            <ul class="nav-links case-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../docs/Allison_Otero_Resume.pdf?v=20260919-title">Resume</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container case-hero-inner">
+            <p class="hero-kicker">MATLAB + Python</p>
+            <h1>Signal Processing &amp; FFT</h1>
+            <p>Two complementary signal-analysis workflows combining time-domain filtering, peak detection, feature extraction, and frequency-domain interpretation.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-section">
+            <div class="container case-grid">
+                <aside class="case-meta">
+                    <div>
+                        <span>Roles</span>
+                        <p>Data import, preprocessing, filtering, peak detection, feature extraction, FFT analysis</p>
+                    </div>
+                    <div>
+                        <span>Tools</span>
+                        <p>MATLAB, Python, Jupyter Notebook, NumPy, SciPy, Matplotlib</p>
+                    </div>
+                    <div>
+                        <span>Methods</span>
+                        <p>Butterworth filtering, zero-phase filtering, R-peak detection, windowed features, Hann-window FFT</p>
+                    </div>
+                    <div>
+                        <span>Data</span>
+                        <p>Vernier EKG recording, imported sensor series, synthetic multi-frequency signal</p>
+                    </div>
+                </aside>
+
+                <div class="case-content">
+                    <div class="case-intro-card">
+                        <span>Combined Project Overview</span>
+                        <p>This page brings the MATLAB and Python signal-processing work together in one case study. The MATLAB workflow filtered EKG data and identified R-peaks for heart-rate estimation, while the Python workflow examined time-varying sensor activity and used FFT analysis to resolve frequency components in a noisy signal.</p>
+                    </div>
+
+                    <h2>MATLAB: EKG Filtering &amp; Heartbeat Detection</h2>
+                    <p>The EKG workflow imported time and voltage data, estimated a 100 Hz sampling rate, and applied a 0.5-40 Hz Butterworth band-pass filter. Zero-phase <code>filtfilt</code> processing reduced unwanted content without shifting the timing used for R-peak detection.</p>
+                    <div class="project-evidence-grid">
+                        <figure class="project-figure">
+                            <img src="../assets/signal-processing/matlab-raw-filtered-ekg.png" alt="Raw Vernier EKG signal and the filtered EKG signal in MATLAB.">
+                            <figcaption>Raw and 0.5-40 Hz filtered Vernier EKG signals.</figcaption>
+                        </figure>
+                        <figure class="project-figure">
+                            <img src="../assets/signal-processing/matlab-r-peaks.png" alt="Filtered EKG with detected R-peaks highlighted in red.">
+                            <figcaption>Detected R-peaks used to calculate R-R intervals and estimate heart rate.</figcaption>
+                        </figure>
+                    </div>
+                    <ol class="workflow-list">
+                        <li>Import time and voltage data from the recorded EKG dataset.</li>
+                        <li>Apply a 0.5-40 Hz Butterworth filter with zero-phase processing.</li>
+                        <li>Use MATLAB peak detection to locate candidate R-peaks.</li>
+                        <li>Calculate R-R intervals and estimate heart rate as 60 divided by the interval.</li>
+                    </ol>
+
+                    <h2>Python: Windowed Features &amp; FFT</h2>
+                    <p>The Python notebook explored both time-domain structure and frequency content. Five-second windows were summarized with mean, peak-to-peak, and centered RMS features. A separate controlled exercise applied a Hann window and amplitude-scaled FFT to a noisy signal containing known components.</p>
+                    <figure class="project-figure project-figure-wide">
+                        <img src="../assets/signal-processing/python-time-domain.png" alt="Imported sensor data plotted over 60 seconds in Python.">
+                        <figcaption>Imported sensor-data series showing changing activity levels across time.</figcaption>
+                    </figure>
+                    <figure class="project-figure project-figure-wide">
+                        <img src="../assets/signal-processing/python-windowed-features.png" alt="Windowed mean, peak-to-peak, and centered RMS features calculated in Python.">
+                        <figcaption>Five-second time-domain features summarize how the signal changes between windows.</figcaption>
+                    </figure>
+                    <figure class="project-figure project-figure-wide">
+                        <img src="../assets/signal-processing/python-fft-spectrum.png" alt="Amplitude spectrum with identified frequency components near 8, 15, and 33 hertz.">
+                        <figcaption>The FFT resolves the controlled signal components at 8, 15, and 33 Hz, providing a check on frequency identification and amplitude scaling.</figcaption>
+                    </figure>
+
+                    <h2>Engineering Takeaways</h2>
+                    <ul>
+                        <li>Time-domain and frequency-domain views answer different questions about the same signal.</li>
+                        <li>Filtering choices must preserve the timing information needed for event detection.</li>
+                        <li>Windowed features provide compact descriptions of changing sensor activity.</li>
+                        <li>Known-frequency inputs are useful for checking FFT implementation and interpretation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <button class="back-to-top" type="button" aria-label="Back to top"><span>Back to Top</span></button>
+    <script src="../js/script.js"></script>
+</body>
+</html>
